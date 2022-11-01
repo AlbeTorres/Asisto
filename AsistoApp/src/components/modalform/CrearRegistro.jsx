@@ -1,22 +1,29 @@
-import React from 'react'
+import React from "react";
 
 const CrearRegistro = () => {
   return (
     <div>
-        <div>
-            <input type="date" name="" id="" />
-        </div>
-        <div>
-            <button>scanear nuevo</button>
-        </div>
-        <div className='lista trabajadores'>
-    <div>
-        <p>trabajador</p>
-        <button>eliminar</button>
-    </div>
-        </div>
-    </div>
-  )
-}
+      <h3 className="font-bold text-lg mb-5 ">
+        Crear Nuevo Registro
+      </h3>
+    <div className="grid place-items-center ">
 
-export default CrearRegistro
+      <div>
+        <input type="date" name="" id="" />
+      </div>
+
+    </div>
+  
+      <div className="modal-action">
+        <label htmlFor="my-modal" className="btn">
+          Cancelar
+        </label>
+        <label htmlFor="my-modal" className="btn btn-primary">
+         Crear
+        </label>
+      </div>
+    </div>
+  );
+};
+
+export default CrearRegistro;

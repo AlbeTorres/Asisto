@@ -4,7 +4,7 @@ import NavComponent from '../components/navbar/NavComponent'
 import HeaderComponent from '../components/header/HeaderComponent'
 import MainContainer from '../components/maincontainer/MainContainer'
 
-const UsuarioMenu = () => {
+const TrabajadorMenu = () => {
   return (
     <div>
         <NavComponent />
@@ -16,4 +16,4 @@ const UsuarioMenu = () => {
   )
 }
 
-export default UsuarioMenu
+export default TrabajadorMenu
