@@ -7,56 +7,6 @@ const CrearRegistroFormList = () => {
        
        
        
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
-        <div className="flex items-center justify-between w-full  ">
-          <p className='ml-2'>Alberto Torres Reyes</p>
-            <FaTrash className='text-gray-600 text-xl ml-2 ' />
-          
-        </div>
        
        
        
