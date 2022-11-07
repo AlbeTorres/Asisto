@@ -1,5 +1,5 @@
-import productoReducer from "./productoReducer";
-import productoContext from "./productoContext";
+import trabajadorReducer from "./productoReducer";
+import trabajadorContext from "./productoContext";
 import { useReducer } from "react";
 import tokenAuth from "../../config/tokenAuth";
 import clienteAxios from "../../config/axios";
