@@ -42,20 +42,20 @@ exports.obtenerRegistro= async(req, res)=>{
     }
 
 }
-exports.modificarPedido= async(req, res)=>{
+exports.modificarRegistro= async(req, res)=>{
 
     try {
 
         //verificar que el trabajo existe
-        const pedidoFind = await Pedido.findById(req.params.id);
-        if(!pedidoFind){
-            return res.status(404).json({msg:'No existe el pedido a modificar'});
+        const registroFind = await Registro.findById(req.params.id);
+        if(!registroFind){
+            return res.status(404).json({msg:'No existe el Registro a modificar'});
         }
 
         //actualizar trabajo
-        await Pedido.updateOne({_id:req.params.id},{$set: req.body})
+        await Registro.updateOne({_id:req.params.id},{$set: req.body})
 
-        const resolve = await Pedido.findById(req.params.id);
+        const resolve = await Registro.findById(req.params.id);
         res.status(200).json(resolve);
          
     } catch (error) {
@@ -65,19 +65,19 @@ exports.modificarPedido= async(req, res)=>{
     }
 
 }
-exports.eliminarPedido= async(req, res)=>{
+exports.eliminarRegistro= async(req, res)=>{
 
     try {
 
          //verificar que el trabajo existe
-         const pedidoFind = await Pedido.findById(req.params.id);
-        if(!pedidoFind){
-            return res.status(404).json({msg:'No existe el pedido a modificar'});
+         const registroFind = await Registro.findById(req.params.id);
+        if(!registroFind){
+            return res.status(404).json({msg:'No existe el Registro a modificar'});
         }
 
          //eliminar trabajo
-         await Pedido.findOneAndRemove({_id:req.params.id});
-         res.status(200).json({msg:'Pedido eliminado correctamente'});
+         await Registro.findOneAndRemove({_id:req.params.id});
+         res.status(200).json({msg:'Registro eliminado correctamente'});
          
     } catch (error) {
        console.log(error)

@@ -1,7 +1,7 @@
 // rutas productos
 const express = require('express');
 const router = express.Router();
-const productoController = require('../controllers/productoController');
+const registrosController = require('../controllers/registrosController');
 const {check} = require('express-validator');
 const auth = require('../middleware/auth');
 
@@ -15,22 +15,22 @@ router.post('/',auth,
         check('area', 'El area es obligatoria').not().isEmpty(),
     
     ],
-    productoController.crearProducto
+    registrosController.crearRegistro
 );
 
 //obtener todos los participantes
 router.get('/',
-    productoController.obtenerProductos
+    registrosController.obtenerRegistro
     );
 
 //modificar un participante
 router.patch('/:id',auth,
-    productoController.modificarProducto
+    registrosController.modificarRegistro
     );
 
 //eliminar un participante
 router.delete('/:id',auth,
-    productoController.eliminarProducto
+    registrosController.eliminarRegistro
     );
 
 
