@@ -1,7 +1,18 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import RegistroCard from './RegistroCard'
+import registroContext from '../../context/registroContext/registroContext'
 
 const RegistroList = () => {
+
+
+
+  const {registros, obtenerRegistros}=useContext(registroContext)
+
+  useEffect(()=>{
+    obtenerRegistros()
+  },[])
+
+  console.log(registros)
   return (
     <div>
         <div className='bg-gray-800 grid grid-cols-1 h-10 place-items-center rounded-t-md '>
@@ -9,16 +20,14 @@ const RegistroList = () => {
             
         </div>
         <div className='border-2 border-gray-200 rounded-b-md overflow-y-auto h-96'>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
-        <RegistroCard/>
+
+        {
+          registros.length!==0 ?
+        registros.map(registro=><RegistroCard/>):
+        
+        <h1>No hay registros creados aun</h1>
+        }
+        
 
         </div>
     </div>

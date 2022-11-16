@@ -3,7 +3,7 @@ import AddRegistroCard from './AddRegistroCard'
 
 
 const AddRegistro = () => {
-    let nuevo=false
+    let nuevo=true
   return (
     <div className='w-full'>
     {nuevo ?

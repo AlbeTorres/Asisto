@@ -5,13 +5,13 @@ import ModificarRegistroform from '../modalform/ModificarRegistroform'
 const Modal = () => {
 
   // const accion={accion:"crearproducto"}
-  const accion={accion:"modificar"}
+  const accion={accion:"crear"}
   return (
     <div>
     <input type="checkbox" id="my-modal" className="modal-toggle" />
     <div className="modal">
       <div className="modal-box">
-      {accion?.accion === "crearproducto" &&
+      {accion?.accion === "crear" &&
           <div className="w-full flex items-center justify-center ">
           <CrearRegistro/>
           </div>}

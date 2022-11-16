@@ -26,7 +26,7 @@ const RegistroState = (props) => {
   const [state, dispatch] = useReducer(registroReducer, initialState);
 
   //operaciones Crud
-  const obtenerRegsitros = async () => {
+  const obtenerRegistros = async () => {
     try {
       const response = await clienteAxios.get('api/registros')
 
@@ -154,7 +154,7 @@ const RegistroState = (props) => {
         busqueda:state.busqueda,
         accion:state.accion,
         obtenerRegistro,
-        obtenerRegsitros,
+        obtenerRegistros,
         modificarRegistro,
         eliminarRegistro,
         crearRegistro,
