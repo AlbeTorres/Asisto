@@ -16,8 +16,8 @@ const RegistroSchema = mongoose.Schema({
         required: true,
     },
     fecha:{
-        type: Date,
-        default: Date.now()
+        type: String,
+        require: true,
     },
     creador:{
         type: mongoose.Schema.Types.ObjectId,

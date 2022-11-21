@@ -6,6 +6,7 @@ import TrabajadorState from './context/trabajadorContext/trabajadorState'
 import UsuarioState from './context/usuarioContext/usuarioState'
 import AuthState from './context/authContext/authState'
 import AlertaState from './context/alertaContext/alertaState'
+import tokenAuth from "./config/tokenAuth";
 
 const token = localStorage.getItem("token");
 if (token) {

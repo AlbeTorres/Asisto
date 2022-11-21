@@ -13,7 +13,7 @@ const RegistroState = (props) => {
     registros: [
       {
         _id: "",
-        date: "",
+        fecha: "",
         area: "",
         listaTrabadores: "",
       },
