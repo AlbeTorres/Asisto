@@ -1,7 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import registroContext from '../../context/registroContext/registroContext'
+import { Link } from 'react-router-dom'
 
-const RegistroCard = () => {
+const RegistroCard =({id}) => {
+
+  const {establecerAccion}= useContext(registroContext)
+
+  const establecerAccionAux=(id)=>{
+
+    establecerAccion({id })
+  }
   return (
     <div className=' grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-fit py-4 gap-4 place-items-center border-gray-200 border-b   '>
         
@@ -11,7 +20,7 @@ const RegistroCard = () => {
         </p>
         </div>
         <div className='grid place-items-center '>
-            <label htmlFor="my-modal" className="btn modal-button bg-gray-800 text-white">Editar</label>
+            <Link onClick={()=>establecerAccionAux(id)} to={'/modificarregistro'} className={'btn'} >Modificar</Link>
             
             
         </div>
