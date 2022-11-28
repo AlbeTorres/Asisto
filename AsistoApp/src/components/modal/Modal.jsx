@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useContext}  from 'react'
 import CrearRegistro from '../../components/modalform/CrearRegistro'
 import ModificarRegistroform from '../modalform/ModificarRegistroform'
 import ScannerComponent from '../scanner/ScannerComponent'
+import registroContext from '../../context/registroContext/registroContext'
+
 
 const Modal = () => {
 
-  // const accion={accion:"crearproducto"}
-  const accion={accion:"crear"}
+  const {accion}= useContext(registroContext)
+
+  
+ 
   return (
     <div>
     <input type="checkbox" id="my-modal" className="modal-toggle" />

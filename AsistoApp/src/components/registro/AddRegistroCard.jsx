@@ -6,6 +6,11 @@ const AddRegistroCard = () => {
 
   const {establecerAccion}= useContext(registroContext)
 
+  const establecerAccionAux=(accion)=>{
+
+    establecerAccion({accion })
+  }
+
   //esto es un test de commit
 
 
@@ -18,7 +23,7 @@ const AddRegistroCard = () => {
         </p>
         </div>
         <div className='grid place-items-center '>
-            <label htmlFor="my-modal" className="btn modal-button bg-gray-800 text-white mr-4">Agregar</label>
+            <label onClick={()=>establecerAccionAux('scanner')} htmlFor="my-modal" className="btn modal-button bg-gray-800 text-white mr-4">Agregar</label>
             
             
         </div>
