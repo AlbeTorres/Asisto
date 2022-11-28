@@ -1,6 +1,7 @@
 import React from 'react'
 import CrearRegistro from '../../components/modalform/CrearRegistro'
 import ModificarRegistroform from '../modalform/ModificarRegistroform'
+import ScannerComponent from '../scanner/ScannerComponent'
 
 const Modal = () => {
 
@@ -18,6 +19,10 @@ const Modal = () => {
       {accion?.accion === "modificar" &&
           <div className="w-full flex items-center justify-center ">
           <ModificarRegistroform/>
+          </div>}
+      {accion?.accion === "scanner" &&
+          <div className="w-full flex items-center justify-center ">
+          <ScannerComponent/>
           </div>}
         
       </div>

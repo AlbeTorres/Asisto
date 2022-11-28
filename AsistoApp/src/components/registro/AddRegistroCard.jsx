@@ -1,6 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import registroContext from '../../context/registroContext/registroContext'
 
 const AddRegistroCard = () => {
+
+
+  const {establecerAccion}= useContext(registroContext)
+
+  
+
+
   return (
     <div className=' grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 h-fit py-4 gap-4 place-items-center border-gray-200 border-b   '>
         
