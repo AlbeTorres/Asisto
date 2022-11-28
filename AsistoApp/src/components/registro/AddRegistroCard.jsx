@@ -6,7 +6,7 @@ const AddRegistroCard = () => {
 
   const {establecerAccion}= useContext(registroContext)
 
-  
+  //esto es un test de commit
 
 
   return (
