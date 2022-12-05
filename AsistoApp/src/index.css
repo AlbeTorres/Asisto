@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.usuario-registro__card{
+    display: grid;
+    grid-template-columns: 25% 63% 12%;
+    
+}

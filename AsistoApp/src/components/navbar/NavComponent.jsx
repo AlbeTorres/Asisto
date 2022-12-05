@@ -1,10 +1,20 @@
 
-import React,{Fragment} from 'react'
+import React,{Fragment, useContext, useEffect} from 'react'
 import {Link } from 'react-router-dom'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import authContext from '../../context/authContext/authContext'
+import noprofile from '../../assets/noperfil.jpg'
 
 const NavComponent = () => {
+
+  const {usuarioAutenticado, usuario} =useContext(authContext);
+
+
+
+  useEffect(()=>{
+    usuarioAutenticado()
+  },[])
 
     const user = {
 
@@ -19,15 +29,12 @@ const NavComponent = () => {
       
         { name: 'Registros', href: '/', current: true },
         { name: 'Trabajadores', href: '/trabajadores', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Calendar', href: '#', current: false },
-        { name: 'Reports', href: '#', current: false },
+  
       ]
       const userNavigation = [
       
       
         { name: 'Your Profile', href: '#' },
-        { name: 'Settings', href: '#' },
         { name: 'Sign out', href: '#' },
       ]
       
@@ -79,13 +86,11 @@ const NavComponent = () => {
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                       </button>
-
-                      {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <img className="h-8 w-8 rounded-full" src={usuario?.imageUrl!=null ? usuario?.imageUrl : noprofile} alt="" />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -116,6 +121,8 @@ const NavComponent = () => {
                           </Menu.Items>
                         </Transition>
                       </Menu>
+                      
+                      {/* Profile dropdown */}
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">
@@ -152,11 +159,11 @@ const NavComponent = () => {
                 <div className="border-t border-gray-700 pt-4 pb-3">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      <img className="h-10 w-10 rounded-full" src={usuario?.imageUrl!=null ? usuario?.imageUrl : noprofile} alt="" />
                     </div>
                     <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
+                      <div className="text-base font-medium leading-none text-white">{usuario?.nombre}</div>
+                      <div className="text-sm font-medium leading-none text-gray-400">{usuario?.email}</div>
                     </div>
                     <button
                       type="button"

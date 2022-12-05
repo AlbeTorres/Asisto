@@ -23,10 +23,9 @@ const ModificarRegistroform = () => {
     <div className="w-full">
       <NavComponent />
       <h3 className="font-bold text-lg m-5 ">Modificar Registro</h3>
-      <div className=" mt-5  md:place-items-center md:grid  md:grid-cols-2 md:gap-4 px-2  ">
+      <div className=" mt-5 md:items-stretch md:justify-items-stretch   md:grid  md:grid-cols-2 md:gap-4 px-2  ">
         <div className="flex flex-col items-center justify-between gap-4 mb-5 w-full">
           <input className="w-fit text-xl my-5 " type="date" name="" id="" />
-          <label htmlFor="my-modal" onClick={()=>{establecerAccionAux('scanner')}} className="btn btn-secondary w-1/4 ">Scanner</label>
         </div>
         <div className="h-80 my-5">
           <CrearRegistroFormList>
@@ -42,7 +41,7 @@ const ModificarRegistroform = () => {
         <Link to={'/'} className="btn mr-5 ">
           Cancelar
         </Link>
-        <button  className="btn btn-primary">
+        <button  className="btn ">
           Aceptar
         </button>
       </div>
