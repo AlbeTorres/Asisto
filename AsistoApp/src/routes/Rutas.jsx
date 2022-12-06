@@ -11,9 +11,9 @@ const Rutas = () => {
   return (
     <div>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/home" element={<Home />} />
         <Route exact path="/trabajadores" element={<TrabajadorMenu />} />
-        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<Login />} />
         <Route exact path="/register" element={<NuevaCuenta />} />
         <Route exact path="/modificarregistro" element={<ModificarRegistroform />} />
       </Routes>

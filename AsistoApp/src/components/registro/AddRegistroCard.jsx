@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import registroContext from '../../context/registroContext/registroContext'
 
-const AddRegistroCard = () => {
+const AddRegistroCard = ({date}) => {
 
 
   const {establecerAccion}= useContext(registroContext)
@@ -19,7 +19,7 @@ const AddRegistroCard = () => {
         
         <div>
         <p className='text-gray-500'>
-            22 de diciembre del 2022
+            {date}
         </p>
         </div>
         <div className='grid place-items-center '>

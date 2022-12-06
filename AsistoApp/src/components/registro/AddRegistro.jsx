@@ -13,6 +13,8 @@ const AddRegistro = () => {
   const date= new Date()
   
   const fechahoy= date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear()
+
+
   const[registro, setRegistro]=useState({
     estado:'en proceso',
     area:'nodo',
@@ -39,7 +41,7 @@ const AddRegistro = () => {
             <p className='text-white '>Registro actual</p>
             
         </div>
-        <AddRegistroCard/>
+        <AddRegistroCard date={registroactual?.fecha} />
         </div> }
     </div>
   )

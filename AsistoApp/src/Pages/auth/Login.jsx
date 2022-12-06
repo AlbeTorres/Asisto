@@ -18,7 +18,7 @@ const Login = () => {
     usuarioAutenticado();
 
     if (autenticado) {
-      history("/");
+      history("/home");
     }
 
     if (mensaje) {

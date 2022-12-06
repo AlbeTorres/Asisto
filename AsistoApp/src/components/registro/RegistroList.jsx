@@ -23,7 +23,7 @@ const RegistroList = () => {
 
         {
           registros.length!==0 ?
-        registros.map(registro=><RegistroCard/>):
+        registros.map(registro=><RegistroCard date={registro.fecha } />):
         
         <h1>No hay registros creados aun</h1>
         }
