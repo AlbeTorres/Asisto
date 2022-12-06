@@ -34,6 +34,10 @@ const TrabajadorSchema = mongoose.Schema({
    area:{
         type: String,
     },
+    carnet:{
+        type: String,
+        trim: true
+    },
     creador:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'Usuario'

@@ -9,11 +9,7 @@ const TrabajadorState = (props) => {
 
   const initialState = {
     trabajadores: [
-      {
-        _id: "",
-        name: "",
-        area: "",
-      },
+     
     ],
     trabajador: null,
     busqueda: "",
