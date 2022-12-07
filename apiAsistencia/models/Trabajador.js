@@ -17,11 +17,11 @@ const TrabajadorSchema = mongoose.Schema({
     },
     img:{
         type: String,
-        required:true,
+        
     },
     cloud_id:{
         type: String,
-        required:true,
+        
     },
     provincia:{
         type: String,

@@ -3,6 +3,7 @@ import CrearRegistro from '../../components/modalform/CrearRegistro'
 import ModificarRegistroform from '../modalform/ModificarRegistroform'
 import ScannerComponent from '../scanner/ScannerComponent'
 import registroContext from '../../context/registroContext/registroContext'
+import CrearTrabajador from '../modalform/CrearTrabajador'
 
 
 const Modal = () => {
@@ -27,6 +28,10 @@ const Modal = () => {
       {accion?.accion === "scanner" &&
           <div className="w-full flex items-center justify-center ">
           <ScannerComponent/>
+          </div>}
+      {accion?.accion === "creartrabajador" &&
+          <div className="w-full flex items-center justify-center ">
+          <CrearTrabajador/>
           </div>}
         
       </div>
