@@ -2,6 +2,7 @@ import React,{useContext, useState}  from "react";
 import AddImg from "../img/AddImg";
 import trabajadorContext from '../../context/trabajadorContext/trabajadorContext' 
 import authContext from '../../context/authContext/authContext'
+import worker from '../../assets/noperfil.jpg'
 
 const CrearTrabajador = () => {
 
@@ -15,9 +16,19 @@ const CrearTrabajador = () => {
         area:'',
         carnet:'',
         estado:'activo',
-        creador:usuario._id
+        creador:usuario._id,
+        cloud_id:''
     });
+    
+    const adImg=(img,id)=>{
+        setTarbajador({
+            ...trabajador,
+            img,
+            cloud_id:id
+        })
 
+
+    }
 
     const {nombre, img, categoria, area, carnet}=trabajador;
 
@@ -30,8 +41,8 @@ const CrearTrabajador = () => {
     }
 
 
-    const onSubmit=e=>{
-        e.preventDefault()
+    const onSubmit=()=>{
+        
 
         crearTrabajador(trabajador)
 
@@ -47,6 +58,17 @@ const CrearTrabajador = () => {
     }
 
 
+const onCancel=()=>{
+    setTarbajador({
+        nombre:'',
+        img:'',
+        categoria:'',
+        area:'',
+        carnet:'',
+        estado:'activo',
+        creador:usuario._id
+    })
+}
 
 
 
@@ -54,7 +76,7 @@ const CrearTrabajador = () => {
   return (
     <div className="flex flex-col justify-center md:flex-row  md:justify-between md:gap-x-5 ">
       <figure className="h-44 my-2 w-44 rounded-md mx-auto">
-        <AddImg />
+        <AddImg img={img==='' ? worker: img} addImg={adImg} />
       </figure>
       <div>
         <div className="my-2">
@@ -148,7 +170,7 @@ const CrearTrabajador = () => {
 
         <div className="w-full flex items-center my-5 justify-end">
           <label onClick={onSubmit} htmlFor="my-modal" className="btn ">Crear</label>
-          <label htmlFor="my-modal" className="btn ml-5">Cancelar</label>
+          <label onClick={onCancel} htmlFor="my-modal" className="btn ml-5">Cancelar</label>
         </div>
       </div>
     </div>
