@@ -10,7 +10,7 @@
 
 .usuario-card{
     display: grid;
-    grid-template-columns: 25% 40% 22%;
+    grid-template-columns: 25% auto 25%;
     
 }
 
@@ -18,7 +18,7 @@
 
     .usuario-card{
         display: grid;
-        grid-template-columns: 15% 20% 20% 20% 20%;
+        grid-template-columns: 15% 20% 20% 20% 18%;
         
     }
 }
