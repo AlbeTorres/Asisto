@@ -27,7 +27,7 @@ const NavComponent = () => {
       const navigation = [
       
       
-        { name: 'Registros', href: '/', current: true },
+        { name: 'Registros', href: '/home', current: true },
         { name: 'Trabajadores', href: '/trabajadores', current: false },
   
       ]
